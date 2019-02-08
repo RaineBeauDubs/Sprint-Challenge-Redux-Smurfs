@@ -32,7 +32,6 @@ class SmurfForm extends React.Component {
   render() {
     return (
       <div>
-        <h2>Add Smurf</h2>
         <form onSubmit={this.addSmurf}>
           <input 
             type='text' 

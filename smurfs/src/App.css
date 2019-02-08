@@ -1,28 +1,56 @@
 .App {
   text-align: center;
+  background-image: url("https://www.desktop-background.com/download/1280x1024/2014/01/19/703573_the-smurfs-wallpapers-1920x1080-2-hebus-org-high-definition_1920x1080_h.jpg");
+  height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.smurfCard {
+  background: #88FFFE;
+  border: 5px solid black;
+  width: 275px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.smurfSec {
+  display: flex;
+  width: 925px;
+  flex-wrap: wrap;
+  margin: 10px;
+  margin-top: 80px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.topBar {
+  color: #88FFFE;
+  width: 100%;
+  background: #03175E;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+form {
+  display: flex;
+  align-content: flex-start;
+  margin-left: 17px;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input {
+  border: 5px solid #88FFFE;
+  margin: 10px;
+  border-radius: 10px;
+  width: 200px;
+  height: 20px;
+}
+
+button {
+  background: #88FFFE;
+  border-radius: 10px;
+  height: 33px;
+  margin-top: 10px;
 }
