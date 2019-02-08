@@ -11,11 +11,11 @@ import {
 */
 const initialState = {
   smurfs: [],
-   fetchingSmurfs: false,
-   addingSmurf: false,
-   updatingSmurf: false,
-   deletingSmurf: false,
-   error: null
+  fetchingSmurfs: false,
+  addingSmurf: false,
+  addError: '',
+  addSuccess: '',
+  error: null
 }
 
 /*
@@ -32,6 +32,44 @@ const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
+    case FETCH_SMURFS_START:
+      return {
+        ...state, 
+        fetchingSmurfs: true
+      }
+    case FETCH_SMURFS_SUCCESS:
+      return {
+        ...state, 
+        smurfs: action.payload, 
+        fetchingSmurfs: false
+      }
+    case FETCH_SMURFS_ERROR:
+      return {
+        ...state, 
+        error: action.payload, 
+        fetchingSmurfs: false
+      }
+    case POST_SMURFS_START:
+      return {
+        ...state, 
+        addingSmurf: true,
+        addError: '',
+        addSuccess: ''
+      }
+    case POST_SMURFS_SUCCESS:
+      return {
+        ...state, 
+        addingSmurf: false,
+        addError: '',
+        addSuccess: action.payload
+      }
+    case POST_SMURFS_ERROR:
+      return {
+        ...state, 
+        addingSmurf: false,
+        addError: action.payload,
+        addSuccess: ''
+      }
     default:
       return state;
   }
