@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import SmurfList from './components/SmurfList';
+import SmurfForm from './components/SmurfForm';
 
 import { getSmurfs } from './actions/index';
 
@@ -25,6 +26,7 @@ componentDidMount() {
           <h1>Smurf Villiage Directory</h1>
         </div>
         <SmurfList smurfs={this.props.smurfs} />
+        <SmurfForm />
       </div>
     );
   }
