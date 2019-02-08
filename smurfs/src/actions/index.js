@@ -37,7 +37,7 @@ export function addSmurf(newSmurf) {
   return function(dispatch) {
     dispatch({ type: POST_SMURFS_START });
     axios 
-      .get("http://localhost:3333/smurfs", newSmurf)
+      .post("http://localhost:3333/smurfs", newSmurf)
       .then(response => dispatch({ type: POST_SMURFS_SUCCESS, payload: response.data }))
       .catch(error => dispatch({ type: POST_SMURFS_ERROR, payload: error }))
   };
